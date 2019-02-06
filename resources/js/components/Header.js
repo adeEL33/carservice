@@ -27,14 +27,14 @@ export default class Header extends Component {
             </ul>
             <ul className="navbar-nav ml-auto">
                 <li className="nav-item">
-                    {
+                    {/* {
                             
                     JSON.parse(localStorage.getItem('validate')).map((user,i)=>{
                         
                         return (
                                 <a className="nav-link" key={i}>Hi ! {user.name}</a>                                 )
                         })
-                    }
+                    } */}
                 </li>
                 <li className="nav-item active logout">
                 <form onSubmit={ this.Logout }>

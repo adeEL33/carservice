@@ -23,7 +23,7 @@ export default class Index extends Component {
     render() {
         return (
             <div>
-            <Router>
+            <Router basename={'/carservice/public'}>
                 <div>
             <Header/>
             <div className="container-fluid">
@@ -42,23 +42,24 @@ export default class Index extends Component {
                         <div className="cart-header"><Link to='/viewsale' className="text text-success">View Sales</Link></div><hr/>
                        
                     </div>
+                    
                     <div className="col-md-10">
-                        <Route exact path='/' component={Home}/>
-                        <Route exact path='/addemployee' component={Addemployee}/>
-                        <Route exact path='/viewemployee' component={Viewemployee}/>
-                        <Route exact path='/addservice' component={Addservice}/>
-                        <Route exact path='/viewservice' component={Viewservice}/>
-                        <Route exact path='/service/editservice/:id' component={Editservice}/>
-                        <Route exact path='/employee/editemp/:id' component={Editemployee}/>
-                        <Route exact path='/addusers' component={Adduser}/>
-                        <Route exact path='/viewusers' component={Viewuser}/>
-                        <Route exact path='/user/edituser/:id' component={Edituser}/>
-                        <Route exact path='/addcardetails' component={Addcardetails}/>
-                        <Route exact path='/viewcardetails' component={Viewcardetails}/>
-                        <Route exact path='/cardetails/editcardetails/:id' component={Editcardetail}/>
-                        <Route exact path='/sale' component={Sale}/>
-                        <Route exact path='/viewsale' component={Viewsale}/>
-                        <Route exact path='/sale/editsales/:id' component={Editsale}/>
+                        <Route exact path='${process.env.PUBLIC_URL}/' component={Home}/>
+                        <Route exact path='${process.env.PUBLIC_URL}/addemployee' component={Addemployee}/>
+                        <Route exact path='${process.env.PUBLIC_URL}/viewemployee' component={Viewemployee}/>
+                        <Route exact path='${process.env.PUBLIC_URL}/addservice' component={Addservice}/>
+                        <Route exact path='${process.env.PUBLIC_URL}/viewservice' component={Viewservice}/>
+                        <Route exact path='${process.env.PUBLIC_URL}/service/editservice/:id' component={Editservice}/>
+                        <Route exact path='${process.env.PUBLIC_URL}/employee/editemp/:id' component={Editemployee}/>
+                        <Route exact path='${process.env.PUBLIC_URL}/addusers' component={Adduser}/>
+                        <Route exact path='${process.env.PUBLIC_URL}/viewusers' component={Viewuser}/>
+                        <Route exact path='${process.env.PUBLIC_URL}/user/edituser/:id' component={Edituser}/>
+                        <Route exact path='${process.env.PUBLIC_URL}/addcardetails' component={Addcardetails}/>
+                        <Route exact path='${process.env.PUBLIC_URL}/viewcardetails' component={Viewcardetails}/>
+                        <Route exact path='${process.env.PUBLIC_URL}/cardetails/editcardetails/:id' component={Editcardetail}/>
+                        <Route exact path='${process.env.PUBLIC_URL}/sale' component={Sale}/>
+                        <Route exact path='${process.env.PUBLIC_URL}/viewsale' component={Viewsale}/>
+                        <Route exact path='${process.env.PUBLIC_URL}/sale/editsales/:id' component={Editsale}/>
                        
                     </div>
                 </div>
